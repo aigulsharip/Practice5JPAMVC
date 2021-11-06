@@ -26,6 +26,12 @@ public class ProductServiceImpl implements ProductService {
         TypedQuery<Product> query = em.createNamedQuery(Product.FIND_PRODUCT_BY_ID, Product.class);
         query.setParameter("id", id);
         return query.getSingleResult();
+
+//        public Person show(int id) {
+//            return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
+//        }
+
+
     }
 
     @Transactional(readOnly=true)
